@@ -2,7 +2,7 @@
 
 # Vendor Management System API
 
-This is a RESTful API for a vendor management system. This system will handle vendor profiles, track purchase orders, and calculate vendor performance metrics.
+This is a RESTful API in Django Rest Framework for a vendor management system. This system will handle vendor profiles, track purchase orders, and calculate vendor performance metrics.
 
 ## Table of Contents
 
@@ -106,25 +106,23 @@ This is a RESTful API for a vendor management system. This system will handle ve
 
   Delete a purchase order.
 
+- **POST /api/purchase_orders/{po_id}/acknowledge**
+
+  Acknowledge a purchase order.
+
 ### 3. Vendor Performance
 
 - **GET /api/vendors/{vendor_id}/performance/**
 
   Retrieve calculated performance metrics for a specific vendor.
 
-- **POST /api/purchase_orders/{po_id}/acknowledge**
-
-  Acknowledge a purchase order.
 
 ## Usage
 
 To use the API endpoints, you can use tools like [Postman](https://www.postman.com/) or send HTTP requests using any programming language.
 
-Here's an example using `curl` to create a new vendor:
-
-```bash
-curl -X POST -H "Content-Type: application/json" -d '{"name": "Sample Vendor", "contact_details": "1234567890", "address": "Sample Address"}' http://localhost:8000/api/vendors/
-```
+Here's an example using Postman:
+![Screenshot 2024-04-29 134210](https://github.com/Mohd-Daniyal/Vendor-Management-System/assets/96229438/31c7929a-c9e7-498d-ac2d-fcdf5e82b157)
 
 ## Testing
 
@@ -133,15 +131,3 @@ To run tests, use the following command:
 ```bash
 python manage.py test
 ```
-
-## Contributing
-
-Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to customize this README according to your project's specific details. Let me know if you need further assistance!
